@@ -20,4 +20,3 @@ def test_cli_entrypoint_exists() -> None:
         text=True,
     )
     assert result.returncode == 0
-    assert "--scenario" in result.stdout

@@ -5,7 +5,6 @@ description = "Benchmark for evaluating AI agents on subsea engineering tasks"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
-    "click>=8.3.0",
     "fastmcp>=3.0.0",
 ]
 
