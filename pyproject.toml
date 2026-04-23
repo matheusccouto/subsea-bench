@@ -24,7 +24,27 @@ target-version = "py314"
 src = ["src"]
 
 [tool.ruff.lint]
-select = ["E", "F", "I", "UP", "B", "SIM"]
+# Start with all rules, disable only those that conflict with our project.
+# 
+# Ignored rules and reasons:
+# - D (pydocstyle): Not enforcing docstring style for benchmark code
+# - ANN (annotations): Type checking handled by ty, not ruff
+# - COM (commas): Trailing commas not enforced (conflicts with formatter)
+# - EM (errmsg): Error messages don't need to be f-strings
+# - TRY (tryceratops): Exception handling patterns not enforced
+# - C90 (complexity): McCabe complexity not enforced for benchmark code
+# - ERA (eradicate): Commented-out code detection too aggressive
+# - FIX (fixme): FIXME/TODO comments allowed in development
+# - TD (todo): TODO comments allowed in development
+# - PERF (perflint): Performance linting not critical for benchmarks
+# - RUF012: Mutable class attributes (pytest fixtures use this)
+select = ["ALL"]
+ignore = ["D", "ANN", "COM", "EM", "TRY", "C90", "ERA", "FIX", "TD", "PERF", "RUF012"]
+
+[tool.ruff.lint.per-file-ignores]
+# Allow assert in test files (S101)
+# Allow missing __init__.py in tests (INP001)
+"tests/**" = ["S101", "INP001"]
 
 [tool.ty.environment]
 python-version = "3.14"
