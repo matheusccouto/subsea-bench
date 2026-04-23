@@ -22,7 +22,7 @@ jobs:
           python-version-file: .python-version
 
       - name: Install dependencies
-        run: uv sync
+        run: uv sync --group dev
 
       - name: Run ruff check
         run: uv run ruff check src tests
@@ -34,4 +34,4 @@ jobs:
         run: uv run ty check src
 
       - name: Run pytest
-        run: uv run pytest tests/ -q
+        run: uv run pytest tests/
