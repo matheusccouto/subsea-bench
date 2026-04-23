@@ -4,7 +4,9 @@ version = "0.1.0"
 description = "Benchmark for evaluating AI agents on subsea engineering tasks"
 readme = "README.md"
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "fastmcp>=3.0.0",
+]
 
 [dependency-groups]
 dev = [
@@ -17,6 +19,9 @@ dev = [
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[project.scripts]
+subsea-bench-server = "subsea_bench.server:main"
 
 [tool.ruff]
 line-length = 100
