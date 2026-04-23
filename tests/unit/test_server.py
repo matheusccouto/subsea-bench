@@ -21,15 +21,3 @@ def test_cli_entrypoint_exists() -> None:
     )
     assert result.returncode == 0
     assert "--scenario" in result.stdout
-
-
-def test_cli_accepts_scenario_argument() -> None:
-    """Verify that --scenario argument is parsed correctly."""
-    import argparse
-    from pathlib import Path
-
-    # Test argparse directly without running MCP server
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--scenario", type=Path, required=False)
-    args = parser.parse_args(["--scenario", "/tmp/test"])
-    assert args.scenario == Path("/tmp/test")

@@ -999,6 +999,7 @@ name = "subsea-bench"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "click" },
     { name = "fastmcp" },
 ]
 
@@ -1011,7 +1012,10 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "fastmcp", specifier = ">=3.0.0" }]
+requires-dist = [
+    { name = "click", specifier = ">=8.3.0" },
+    { name = "fastmcp", specifier = ">=3.0.0" },
+]
 
 [package.metadata.requires-dev]
 dev = [
