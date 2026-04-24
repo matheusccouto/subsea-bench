@@ -4,7 +4,10 @@ version = "0.1.0"
 description = "Benchmark for evaluating AI agents on subsea engineering tasks"
 readme = "README.md"
 requires-python = ">=3.14"
-dependencies = []
+dependencies = ["fastmcp>=3.2.0"]
+
+[project.scripts]
+subsea-bench-server = "subsea_bench.server:main"
 
 [dependency-groups]
 dev = [
