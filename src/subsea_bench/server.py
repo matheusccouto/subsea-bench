@@ -2,7 +2,11 @@
 
 from fastmcp import FastMCP
 
-mcp = FastMCP("subsea-bench")
+mcp = FastMCP(
+    "subsea-bench",
+    instructions="MCP server for subsea engineering benchmark scenarios. "
+    "Provides tools for project status, analysis, and supervisor interaction.",
+)
 
 
 def main() -> None:
