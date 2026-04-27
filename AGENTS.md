@@ -30,19 +30,15 @@ Use Mermaid syntax. Render and verify before committing.
 </important>
 
 ## References
-Fetch the `llms.txt` before making assumptions about tool APIs or CLI flags:
-
-| Tool | llms.txt |
-|---|---|
-| uv | https://docs.astral.sh/uv/llms.txt |
-| ruff | https://docs.astral.sh/ruff/llms.txt |
-| ty | https://docs.astral.sh/ty/llms.txt |
-| FastMCP | https://gofastmcp.com/llms.txt |
-| MCP spec | https://modelcontextprotocol.io/llms.txt |
-| LangChain | https://docs.langchain.com/llms.txt |
-| Pydantic | https://docs.pydantic.dev/latest/llms.txt |
-| Claude API | https://platform.claude.com/llms.txt |
-
-No `llms.txt` -- use docs root: [pytest](https://docs.pytest.org/en/stable/) | [pytest-asyncio](https://pytest-asyncio.readthedocs.io/en/latest/) | [hatchling](https://hatch.pypa.io/latest/) | [Python MCP SDK](https://github.com/modelcontextprotocol/python-sdk)
-
-Domain: [MCP spec](https://modelcontextprotocol.io/specification) | [MoorPy](https://github.com/NREL/MoorPy) | [IEA-15MW](https://github.com/IEAWindTask37/IEA-15-240-RWT) | [DNV-OS-E301](https://www.dnv.com/oilgas/standards/offshore-standards/)
+- uv: https://docs.astral.sh/uv/llms.txt
+- ruff: https://docs.astral.sh/ruff/llms.txt
+- ty: https://docs.astral.sh/ty/llms.txt
+- Pydantic: https://docs.pydantic.dev/latest/llms.txt
+- FastMCP: https://gofastmcp.com/llms.txt
+- MCP spec: https://modelcontextprotocol.io/llms.txt
+- LangChain: https://docs.langchain.com/llms.txt
+- pytest: https://docs.pytest.org/en/stable/
+- pytest-asyncio: https://pytest-asyncio.readthedocs.io/en/latest/
+- MoorPy: https://github.com/NREL/MoorPy
+- IEA-15MW: https://github.com/IEAWindTask37/IEA-15-240-RWT
+- DNV-OS-E301: https://www.dnv.com/oilgas/standards/offshore-standards/
